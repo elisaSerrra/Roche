@@ -1,0 +1,13 @@
+  The exercise is to check the validation of a CDS in a string with the regualar expression.
+
+def check_cds(string):
+    """
+    if cds is not verified, print the start of the string because could be not standard
+    """
+    pattern = "^(ATG)([ATGC]{3})+(TAA|TGA|TAG)$" #start codon + multiples of 3 of this group [] + end codon
+    print("\n")
+    for elem in self.cds_ls:
+            if not(re.search(pattern, elem.seq)):
+                print(x.RED+"CDS combined with "+x.END,elem.name,x.RED+" could be not valid. Starts with:"+x.END,elem.seq[0:3])
+            else:
+                print(x.RED+"CDS combined with "+x.END,elem.name,x.RED+" is valid! Starts with:"+x.END,elem.seq[0:3])
